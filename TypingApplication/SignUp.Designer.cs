@@ -133,10 +133,13 @@
             // 
             labelEmailError.AutoSize = true;
             labelEmailError.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            labelEmailError.ForeColor = Color.Red;
             labelEmailError.Location = new Point(165, 247);
             labelEmailError.Name = "labelEmailError";
-            labelEmailError.Size = new Size(0, 17);
+            labelEmailError.Size = new Size(88, 17);
             labelEmailError.TabIndex = 20;
+            labelEmailError.Text = "Invalid Format";
+            labelEmailError.Visible = false;
             // 
             // textBoxPassword
             // 

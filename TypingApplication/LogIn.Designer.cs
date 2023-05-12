@@ -36,6 +36,7 @@
             textBoxEmail = new TextBox();
             labelPassword = new Label();
             labelEmail = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // checkBoxShowPassword
@@ -123,11 +124,25 @@
             labelEmail.TabIndex = 9;
             labelEmail.Text = "Email";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Cursor = Cursors.Hand;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(387, 262);
+            label1.Name = "label1";
+            label1.Size = new Size(121, 20);
+            label1.TabIndex = 17;
+            label1.Text = "Forgot Password?";
+            label1.Click += label1_Click;
+            // 
             // LogIn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(624, 501);
+            Controls.Add(label1);
             Controls.Add(checkBoxShowPassword);
             Controls.Add(labelNoAccount);
             Controls.Add(buttonSignUp);
@@ -156,5 +171,6 @@
         private TextBox textBoxEmail;
         private Label labelPassword;
         private Label labelEmail;
+        private Label label1;
     }
 }

@@ -43,6 +43,10 @@ namespace TypingApplication
         {
             Application.Run(new Main());
         }
+        public void openForgetPassword(object obj)
+        {
+            Application.Run(new ForgotPassword());
+        }
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -80,6 +84,12 @@ namespace TypingApplication
             {
                 buttonLogIn.PerformClick();
             }
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            thread = new Thread(openForgetPassword);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }

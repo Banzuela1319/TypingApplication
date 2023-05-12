@@ -45,15 +45,14 @@ namespace TypingApplication
             }
             if (email.Length < 6 || !Regex.IsMatch(email, "@") || !Regex.IsMatch(email, "\\."))
             {
-                labelEmailError.Text = "Invalid Format";
-                labelEmailError.ForeColor = Color.Red;
+                labelEmailError.Visible = true;
             }
             if (password.Length < 7 || Regex.IsMatch(password, "^[a-zA-Z0-9]+$") || Regex.IsMatch(password, "^[a-zA-Z]+$") || Regex.IsMatch(password, "^[0-9]+$"))
             {
                 labelPasswordError.Text = "Invalid Format";
                 labelPasswordError.ForeColor = Color.Red;
             }
-            if (labelNameError.Visible is false && labelEmailError.Text != "Invalid Format" && labelPasswordError.Text != "Invalid Format")
+            if (labelNameError.Visible is false && labelEmailError.Visible is false && labelPasswordError.Text != "Invalid Format")
             {
                 UserCredentials.InsertCredentials(name, email, password);
 
@@ -76,8 +75,8 @@ namespace TypingApplication
                         MailMessage mailMessage = new MailMessage();
                         mailMessage.From = new MailAddress("typeit.click@gmail.com");
                         mailMessage.To.Add(email);
-                        mailMessage.Subject = "Test";
-                        mailMessage.Body = "Test";
+                        mailMessage.Subject = "Welcome to AppName";
+                        mailMessage.Body = "Thank you for registering";
 
                         client.Send(mailMessage);
                     }
@@ -94,13 +93,12 @@ namespace TypingApplication
         }
         private void textBoxEmail_MouseClick(object sender, MouseEventArgs e)
         {
-            labelEmailError.Text = "";
-            labelEmailError.ForeColor = Color.Black;
+            labelEmailError.Visible = false;
         }
         private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
         {
             labelPasswordError.Text = "Use 8 or more characters with a mix of letters, numbers and symbols";
-            labelPasswordError.ForeColor = Color.Black;
+            labelPasswordError.ForeColor = SystemColors.ControlText;
         }
         public void openLogIn(object obj)
         {

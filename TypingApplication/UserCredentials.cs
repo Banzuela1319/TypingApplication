@@ -31,7 +31,7 @@ namespace TypingApplication
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("This email is already registered");
                     exception = true;
                 }
             }
@@ -75,6 +75,26 @@ namespace TypingApplication
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
+                }
+            }
+        }
+        public static void ResetPassword(string email, string password)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionStr))
+            {
+                try
+                {
+                    string query = $"UPDATE usercredentials SET password = @password WHERE email = @email";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    MySqlDataReader reader;
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@password", password);
+                    connection.Open();
+                    reader = command.ExecuteReader();
+                }
+                catch (Exception)
+                {
+
                 }
             }
         }

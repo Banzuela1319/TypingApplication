@@ -76,6 +76,7 @@
             // 
             buttonSettings.BackColor = Color.Transparent;
             buttonSettings.Cursor = Cursors.Hand;
+            buttonSettings.FlatAppearance.BorderSize = 0;
             buttonSettings.FlatAppearance.MouseDownBackColor = Color.Transparent;
             buttonSettings.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonSettings.FlatStyle = FlatStyle.Flat;
@@ -91,6 +92,7 @@
             // 
             buttonProfile.BackColor = Color.Transparent;
             buttonProfile.Cursor = Cursors.Hand;
+            buttonProfile.FlatAppearance.BorderSize = 0;
             buttonProfile.FlatAppearance.MouseDownBackColor = Color.Transparent;
             buttonProfile.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonProfile.FlatStyle = FlatStyle.Flat;
@@ -129,6 +131,7 @@
             // 
             buttonLogOut.BackColor = Color.Transparent;
             buttonLogOut.Cursor = Cursors.Hand;
+            buttonLogOut.FlatAppearance.BorderSize = 0;
             buttonLogOut.FlatAppearance.MouseDownBackColor = Color.Transparent;
             buttonLogOut.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonLogOut.FlatStyle = FlatStyle.Flat;
