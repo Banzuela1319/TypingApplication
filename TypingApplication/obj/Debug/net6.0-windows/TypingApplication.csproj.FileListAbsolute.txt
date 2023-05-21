@@ -36,3 +36,4 @@ C:\Users\allan\source\repos\TypingApplication\TypingApplication\bin\Debug\net6.0
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.csproj.CopyComplete
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.ForgotPassword.resources
+C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.Result.resources

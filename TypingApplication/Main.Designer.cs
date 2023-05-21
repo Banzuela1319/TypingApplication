@@ -36,17 +36,18 @@
             button10Words = new Button();
             richTextBoxWords = new RichTextBox();
             buttonLogOut = new Button();
+            labelCapsOn = new Label();
             SuspendLayout();
             // 
             // labelAppName
             // 
             labelAppName.AutoSize = true;
             labelAppName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            labelAppName.Location = new Point(29, 36);
+            labelAppName.Location = new Point(55, 36);
             labelAppName.Name = "labelAppName";
-            labelAppName.Size = new Size(341, 86);
+            labelAppName.Size = new Size(244, 86);
             labelAppName.TabIndex = 15;
-            labelAppName.Text = "App Name";
+            labelAppName.Text = "TYPE IT";
             // 
             // button60Words
             // 
@@ -56,6 +57,7 @@
             button60Words.Name = "button60Words";
             button60Words.Size = new Size(100, 50);
             button60Words.TabIndex = 14;
+            button60Words.TabStop = false;
             button60Words.Text = "60 Words";
             button60Words.UseVisualStyleBackColor = true;
             button60Words.Click += button60Words_Click;
@@ -68,6 +70,7 @@
             button30Words.Name = "button30Words";
             button30Words.Size = new Size(100, 50);
             button30Words.TabIndex = 13;
+            button30Words.TabStop = false;
             button30Words.Text = "30 Words";
             button30Words.UseVisualStyleBackColor = true;
             button30Words.Click += button30Words_Click;
@@ -86,6 +89,7 @@
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Size = new Size(40, 40);
             buttonSettings.TabIndex = 12;
+            buttonSettings.TabStop = false;
             buttonSettings.UseVisualStyleBackColor = false;
             // 
             // buttonProfile
@@ -102,6 +106,7 @@
             buttonProfile.Name = "buttonProfile";
             buttonProfile.Size = new Size(40, 40);
             buttonProfile.TabIndex = 11;
+            buttonProfile.TabStop = false;
             buttonProfile.UseVisualStyleBackColor = false;
             // 
             // button10Words
@@ -112,6 +117,7 @@
             button10Words.Name = "button10Words";
             button10Words.Size = new Size(100, 50);
             button10Words.TabIndex = 10;
+            button10Words.TabStop = false;
             button10Words.Text = "10 Words";
             button10Words.UseVisualStyleBackColor = true;
             button10Words.Click += button10Words_Click;
@@ -120,12 +126,16 @@
             // 
             richTextBoxWords.BorderStyle = BorderStyle.None;
             richTextBoxWords.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBoxWords.ForeColor = SystemColors.WindowText;
             richTextBoxWords.Location = new Point(86, 162);
             richTextBoxWords.Name = "richTextBoxWords";
             richTextBoxWords.ReadOnly = true;
             richTextBoxWords.Size = new Size(977, 407);
-            richTextBoxWords.TabIndex = 8;
+            richTextBoxWords.TabIndex = 1;
+            richTextBoxWords.TabStop = false;
             richTextBoxWords.Text = "";
+            richTextBoxWords.KeyDown += richTextBoxWords_KeyDown;
+            richTextBoxWords.KeyPress += richTextBoxWords_KeyPress;
             // 
             // buttonLogOut
             // 
@@ -145,11 +155,23 @@
             buttonLogOut.UseVisualStyleBackColor = false;
             buttonLogOut.Click += buttonLogOut_Click;
             // 
+            // labelCapsOn
+            // 
+            labelCapsOn.AutoSize = true;
+            labelCapsOn.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            labelCapsOn.Location = new Point(459, 585);
+            labelCapsOn.Name = "labelCapsOn";
+            labelCapsOn.Size = new Size(232, 45);
+            labelCapsOn.TabIndex = 16;
+            labelCapsOn.Text = "Capslock is on";
+            labelCapsOn.Visible = false;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1149, 655);
+            Controls.Add(labelCapsOn);
             Controls.Add(labelAppName);
             Controls.Add(button60Words);
             Controls.Add(button30Words);
@@ -162,8 +184,8 @@
             MaximizeBox = false;
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Main";
             Load += Main_Load;
+            KeyDown += Main_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,5 +200,6 @@
         private Button button10Words;
         private RichTextBox richTextBoxWords;
         private Button buttonLogOut;
+        private Label labelCapsOn;
     }
 }
