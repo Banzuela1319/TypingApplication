@@ -21,7 +21,7 @@ namespace TypingApplication
         }
         private void Result_Load(object sender, EventArgs e)
         {
-            
+
             string[] start = Main.startingWords.Split(' ');
             string[] final = Main.typedLetters.Split(' ');
             int rightSyllables = 0;
@@ -50,6 +50,8 @@ namespace TypingApplication
             }
             double accuracy = Main.correctTyped / Main.charactersTyped * 100;
             labelAccuracyResult.Text = Math.Floor(accuracy).ToString() + "%";
+
+            StoreWPMAccuracy.StoringData(int.Parse(labelWPMResult.Text), int.Parse(labelAccuracyResult.Text.Substring(0, labelAccuracyResult.Text.Length - 1)));
         }
         public void openMain()
         {

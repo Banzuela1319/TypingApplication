@@ -73,9 +73,9 @@
             labelAppName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             labelAppName.Location = new Point(12, 9);
             labelAppName.Name = "labelAppName";
-            labelAppName.Size = new Size(244, 86);
+            labelAppName.Size = new Size(226, 86);
             labelAppName.TabIndex = 16;
-            labelAppName.Text = "TYPE IT";
+            labelAppName.Text = "Type It";
             // 
             // labelWPMResult
             // 
@@ -108,9 +108,10 @@
             Controls.Add(labelAccuracy);
             Controls.Add(labelWPM);
             Controls.Add(buttonContinue);
+            MaximizeBox = false;
             Name = "Result";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Result";
+            Text = "Type It";
             Load += Result_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -45,9 +45,9 @@
             labelAppName.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             labelAppName.Location = new Point(55, 36);
             labelAppName.Name = "labelAppName";
-            labelAppName.Size = new Size(244, 86);
+            labelAppName.Size = new Size(226, 86);
             labelAppName.TabIndex = 15;
-            labelAppName.Text = "TYPE IT";
+            labelAppName.Text = "Type It";
             // 
             // button60Words
             // 
@@ -108,6 +108,7 @@
             buttonProfile.TabIndex = 11;
             buttonProfile.TabStop = false;
             buttonProfile.UseVisualStyleBackColor = false;
+            buttonProfile.Click += buttonProfile_Click;
             // 
             // button10Words
             // 
@@ -184,6 +185,7 @@
             MaximizeBox = false;
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "Type It";
             Load += Main_Load;
             KeyDown += Main_KeyDown;
             ResumeLayout(false);

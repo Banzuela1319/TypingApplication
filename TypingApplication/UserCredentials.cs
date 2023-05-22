@@ -92,9 +92,9 @@ namespace TypingApplication
                     connection.Open();
                     reader = command.ExecuteReader();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    Debug.WriteLine(ex.Message);
                 }
             }
         }

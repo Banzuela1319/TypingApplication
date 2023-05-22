@@ -83,6 +83,10 @@ namespace TypingApplication
         {
             Application.Run(new Result());
         }
+        public void openProfile(object obj)
+        {
+            Application.Run(new Profile());
+        }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.email = "";
@@ -304,7 +308,6 @@ namespace TypingApplication
                 }
             }
         }
-
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
             if (!Control.IsKeyLocked(Keys.CapsLock))
@@ -313,6 +316,13 @@ namespace TypingApplication
                 richTextBoxWords.Enabled = true;
                 richTextBoxWords.Focus();
             }
+        }
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openProfile);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }

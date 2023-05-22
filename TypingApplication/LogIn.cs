@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.X509;
 using System.Diagnostics;
+using System.Net;
 using System.Threading;
 
 namespace TypingApplication
@@ -16,12 +17,34 @@ namespace TypingApplication
         }
         private void LogIn_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.email != "" && Properties.Settings.Default.password != "")
+            if (!Internet())
+            {
+                MessageBox.Show("No Internet Access!","Network Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            if (Properties.Settings.Default.email != "" && Properties.Settings.Default.password != "" && Internet())
             {
                 this.Close();
                 thread = new Thread(openMain);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
+            }
+        }
+        private bool Internet()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (var stream = client.OpenRead("https://www.google.com"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)

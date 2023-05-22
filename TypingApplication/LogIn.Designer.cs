@@ -155,7 +155,7 @@
             MaximizeBox = false;
             Name = "LogIn";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Log In";
+            Text = "Type It";
             Load += LogIn_Load;
             ResumeLayout(false);
             PerformLayout();

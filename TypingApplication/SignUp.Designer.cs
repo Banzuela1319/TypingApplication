@@ -204,7 +204,7 @@
             MaximizeBox = false;
             Name = "SignUp";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sign Up";
+            Text = "Type It";
             ResumeLayout(false);
             PerformLayout();
         }
