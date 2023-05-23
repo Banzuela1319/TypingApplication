@@ -76,7 +76,7 @@ namespace TypingApplication
                         mailMessage.From = new MailAddress("typeit.click@gmail.com");
                         mailMessage.To.Add(email);
                         mailMessage.Subject = $"Welcome {name} to Type It";
-                        mailMessage.Body = "Thank you for registering :3";
+                        mailMessage.Body = "Thank you for signing up :3";
 
                         client.Send(mailMessage);
                     }

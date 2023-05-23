@@ -79,7 +79,7 @@ namespace TypingApplication
                             {
                                 resultCount30++;
                                 totalWPM30 += reader.GetInt32("wpm");
-                                totalAccuracy10 += reader.GetInt32("accuracy");
+                                totalAccuracy30 += reader.GetInt32("accuracy");
 
                                 averageWPM30 = Math.Round(totalWPM30 / resultCount30);
                                 averageAccuracy30 = Math.Round(totalAccuracy30 / resultCount30);
@@ -110,6 +110,15 @@ namespace TypingApplication
                                 {
                                     highestAccuracy60 = reader.GetInt32("accuracy");
                                 }
+                            }
+
+                            if (reader.GetString("email") == Properties.Settings.Default.email)
+                            {
+                                ListViewItem item = new ListViewItem();
+                                item.SubItems.Add(reader.GetString("mode"));
+                                item.SubItems.Add(reader.GetString("wpm"));
+                                item.SubItems.Add(reader.GetString("accuracy") + "%");
+                                listViewHistory.Items.Insert(0, item);
                             }
                         }
                         label10AA.Text = averageAccuracy10.ToString() + "%";

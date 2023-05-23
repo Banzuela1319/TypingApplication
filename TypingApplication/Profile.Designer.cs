@@ -275,7 +275,7 @@
             listViewHistory.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
             listViewHistory.Location = new Point(266, 673);
             listViewHistory.Name = "listViewHistory";
-            listViewHistory.Size = new Size(600, 600);
+            listViewHistory.Size = new Size(621, 600);
             listViewHistory.TabIndex = 33;
             listViewHistory.TabStop = false;
             listViewHistory.UseCompatibleStateImageBehavior = false;
