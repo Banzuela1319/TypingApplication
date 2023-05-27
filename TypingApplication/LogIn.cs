@@ -19,7 +19,7 @@ namespace TypingApplication
         {
             if (!Internet())
             {
-                MessageBox.Show("No Internet Access!","Network Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Internet Access!", "Network Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
             if (Properties.Settings.Default.email != "" && Properties.Settings.Default.password != "" && Internet())
@@ -108,11 +108,12 @@ namespace TypingApplication
                 buttonLogIn.PerformClick();
             }
         }
-        private void label1_Click(object sender, EventArgs e)
+        private void labelForgotPassword_Click(object sender, EventArgs e)
         {
             thread = new Thread(openForgetPassword);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
+            thread.Join();
         }
     }
 }

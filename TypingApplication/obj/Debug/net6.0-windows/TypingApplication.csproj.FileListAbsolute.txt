@@ -38,3 +38,4 @@ C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.ForgotPassword.resources
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.Result.resources
 C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.Profile.resources
+C:\Users\allan\source\repos\TypingApplication\TypingApplication\obj\Debug\net6.0-windows\TypingApplication.Settings.resources

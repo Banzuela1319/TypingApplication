@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,19 +14,26 @@ namespace TypingApplication
 
         public static void ReadingRandomWords()
         {
-            using (MySqlConnection connection = new MySqlConnection(UserCredentials.connectionStr))
+            try
             {
-                connection.Open();
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT words FROM randomwords";
-
-                using (MySqlDataReader reader = command.ExecuteReader())
+                using (MySqlConnection connection = new MySqlConnection(UserCredentials.connectionStr))
                 {
-                    while (reader.Read())
+                    connection.Open();
+                    MySqlCommand command = connection.CreateCommand();
+                    command.CommandText = "SELECT words FROM randomwords";
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        listOfWords.Add(reader.GetString(0));
+                        while (reader.Read())
+                        {
+                            listOfWords.Add(reader.GetString(0));
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
         }
     }

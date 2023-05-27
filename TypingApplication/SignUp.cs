@@ -98,7 +98,7 @@ namespace TypingApplication
         private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
         {
             labelPasswordError.Text = "Use 8 or more characters with a mix of letters, numbers and symbols";
-            labelPasswordError.ForeColor = SystemColors.ControlText;
+            labelPasswordError.ForeColor = Color.White;
         }
         public void openLogIn(object obj)
         {
@@ -110,6 +110,28 @@ namespace TypingApplication
             thread = new Thread(openLogIn);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
+        }
+
+        private void textBoxName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSignUp.PerformClick();
+            }
+        }
+        private void textBoxEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSignUp.PerformClick();
+            }
+        }
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSignUp.PerformClick();
+            }
         }
     }
 }

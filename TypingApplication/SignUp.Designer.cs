@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             labelNameError = new Label();
             buttonLogInInstead = new Button();
             textBoxEmail = new TextBox();
@@ -46,9 +47,10 @@
             // labelNameError
             // 
             labelNameError.AutoSize = true;
+            labelNameError.BackColor = Color.Transparent;
             labelNameError.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             labelNameError.ForeColor = Color.Red;
-            labelNameError.Location = new Point(165, 171);
+            labelNameError.Location = new Point(190, 192);
             labelNameError.Name = "labelNameError";
             labelNameError.Size = new Size(88, 17);
             labelNameError.TabIndex = 26;
@@ -57,30 +59,43 @@
             // 
             // buttonLogInInstead
             // 
+            buttonLogInInstead.BackColor = Color.Transparent;
+            buttonLogInInstead.Cursor = Cursors.Hand;
+            buttonLogInInstead.FlatAppearance.BorderSize = 0;
+            buttonLogInInstead.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonLogInInstead.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            buttonLogInInstead.FlatStyle = FlatStyle.Flat;
             buttonLogInInstead.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLogInInstead.Location = new Point(12, 450);
+            buttonLogInInstead.ForeColor = Color.White;
+            buttonLogInInstead.Location = new Point(37, 471);
             buttonLogInInstead.Name = "buttonLogInInstead";
             buttonLogInInstead.Size = new Size(129, 39);
             buttonLogInInstead.TabIndex = 25;
             buttonLogInInstead.Text = "Log In Instead";
-            buttonLogInInstead.UseVisualStyleBackColor = true;
+            buttonLogInInstead.UseVisualStyleBackColor = false;
             buttonLogInInstead.Click += buttonLogInInstead_Click;
             // 
             // textBoxEmail
             // 
+            textBoxEmail.BackColor = Color.FromArgb(64, 64, 64);
+            textBoxEmail.BorderStyle = BorderStyle.None;
             textBoxEmail.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxEmail.Location = new Point(165, 201);
+            textBoxEmail.ForeColor = Color.White;
+            textBoxEmail.Location = new Point(190, 222);
             textBoxEmail.MaxLength = 30;
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(392, 43);
+            textBoxEmail.Size = new Size(392, 36);
             textBoxEmail.TabIndex = 15;
             textBoxEmail.MouseClick += textBoxEmail_MouseClick;
+            textBoxEmail.KeyDown += textBoxEmail_KeyDown;
             // 
             // labelName
             // 
             labelName.AutoSize = true;
+            labelName.BackColor = Color.Transparent;
             labelName.Font = new Font("Segoe UI Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelName.Location = new Point(21, 128);
+            labelName.ForeColor = Color.White;
+            labelName.Location = new Point(46, 149);
             labelName.Name = "labelName";
             labelName.Size = new Size(85, 37);
             labelName.TabIndex = 24;
@@ -89,20 +104,24 @@
             // checkBoxShowPassword
             // 
             checkBoxShowPassword.AutoSize = true;
+            checkBoxShowPassword.BackColor = Color.Transparent;
             checkBoxShowPassword.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            checkBoxShowPassword.Location = new Point(165, 343);
+            checkBoxShowPassword.ForeColor = Color.White;
+            checkBoxShowPassword.Location = new Point(190, 364);
             checkBoxShowPassword.Name = "checkBoxShowPassword";
             checkBoxShowPassword.Size = new Size(161, 29);
             checkBoxShowPassword.TabIndex = 23;
             checkBoxShowPassword.Text = "Show Password";
-            checkBoxShowPassword.UseVisualStyleBackColor = true;
+            checkBoxShowPassword.UseVisualStyleBackColor = false;
             checkBoxShowPassword.CheckedChanged += checkBoxShowPassword_CheckedChanged;
             // 
             // labelCreate
             // 
             labelCreate.AutoSize = true;
+            labelCreate.BackColor = Color.Transparent;
             labelCreate.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCreate.Location = new Point(192, 23);
+            labelCreate.ForeColor = Color.White;
+            labelCreate.Location = new Point(230, 45);
             labelCreate.Name = "labelCreate";
             labelCreate.Size = new Size(257, 40);
             labelCreate.TabIndex = 22;
@@ -110,20 +129,29 @@
             // 
             // buttonSignUp
             // 
+            buttonSignUp.BackColor = Color.Transparent;
+            buttonSignUp.Cursor = Cursors.Hand;
+            buttonSignUp.FlatAppearance.BorderSize = 0;
+            buttonSignUp.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonSignUp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            buttonSignUp.FlatStyle = FlatStyle.Flat;
             buttonSignUp.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSignUp.Location = new Point(269, 392);
+            buttonSignUp.ForeColor = Color.White;
+            buttonSignUp.Location = new Point(294, 413);
             buttonSignUp.Name = "buttonSignUp";
             buttonSignUp.Size = new Size(136, 59);
             buttonSignUp.TabIndex = 19;
             buttonSignUp.Text = "Sign Up";
-            buttonSignUp.UseVisualStyleBackColor = true;
+            buttonSignUp.UseVisualStyleBackColor = false;
             buttonSignUp.Click += buttonSignUp_Click;
             // 
             // labelPasswordError
             // 
             labelPasswordError.AutoSize = true;
+            labelPasswordError.BackColor = Color.Transparent;
             labelPasswordError.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            labelPasswordError.Location = new Point(165, 323);
+            labelPasswordError.ForeColor = Color.White;
+            labelPasswordError.Location = new Point(190, 344);
             labelPasswordError.Name = "labelPasswordError";
             labelPasswordError.Size = new Size(392, 17);
             labelPasswordError.TabIndex = 21;
@@ -132,9 +160,10 @@
             // labelEmailError
             // 
             labelEmailError.AutoSize = true;
+            labelEmailError.BackColor = Color.Transparent;
             labelEmailError.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             labelEmailError.ForeColor = Color.Red;
-            labelEmailError.Location = new Point(165, 247);
+            labelEmailError.Location = new Point(190, 268);
             labelEmailError.Name = "labelEmailError";
             labelEmailError.Size = new Size(88, 17);
             labelEmailError.TabIndex = 20;
@@ -143,20 +172,26 @@
             // 
             // textBoxPassword
             // 
+            textBoxPassword.BackColor = Color.FromArgb(64, 64, 64);
+            textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxPassword.Location = new Point(165, 277);
+            textBoxPassword.ForeColor = Color.White;
+            textBoxPassword.Location = new Point(190, 298);
             textBoxPassword.MaxLength = 30;
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.PasswordChar = '*';
-            textBoxPassword.Size = new Size(392, 43);
+            textBoxPassword.Size = new Size(392, 36);
             textBoxPassword.TabIndex = 17;
             textBoxPassword.MouseClick += textBoxPassword_MouseClick;
+            textBoxPassword.KeyDown += textBoxPassword_KeyDown;
             // 
             // labelPassword
             // 
             labelPassword.AutoSize = true;
+            labelPassword.BackColor = Color.Transparent;
             labelPassword.Font = new Font("Segoe UI Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPassword.Location = new Point(21, 280);
+            labelPassword.ForeColor = Color.White;
+            labelPassword.Location = new Point(46, 301);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(120, 37);
             labelPassword.TabIndex = 18;
@@ -165,8 +200,10 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
+            labelEmail.BackColor = Color.Transparent;
             labelEmail.Font = new Font("Segoe UI Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelEmail.Location = new Point(21, 204);
+            labelEmail.ForeColor = Color.White;
+            labelEmail.Location = new Point(46, 225);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(78, 37);
             labelEmail.TabIndex = 16;
@@ -174,19 +211,26 @@
             // 
             // textBoxName
             // 
+            textBoxName.BackColor = Color.FromArgb(64, 64, 64);
+            textBoxName.BorderStyle = BorderStyle.None;
             textBoxName.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxName.Location = new Point(165, 128);
+            textBoxName.ForeColor = Color.White;
+            textBoxName.Location = new Point(190, 149);
             textBoxName.MaxLength = 50;
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(392, 43);
+            textBoxName.Size = new Size(392, 36);
             textBoxName.TabIndex = 14;
             textBoxName.MouseClick += textBoxName_MouseClick;
+            textBoxName.KeyDown += textBoxName_KeyDown;
             // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(624, 501);
+            BackColor = Color.White;
+            BackgroundImage = Properties.Resources.kbbg;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(699, 551);
             Controls.Add(labelNameError);
             Controls.Add(buttonLogInInstead);
             Controls.Add(textBoxEmail);
@@ -200,7 +244,10 @@
             Controls.Add(labelPassword);
             Controls.Add(labelEmail);
             Controls.Add(textBoxName);
+            DoubleBuffered = true;
+            ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "SignUp";
             StartPosition = FormStartPosition.CenterScreen;

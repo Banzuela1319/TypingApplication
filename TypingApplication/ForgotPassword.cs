@@ -38,6 +38,7 @@ namespace TypingApplication
         }
         private void buttonVerificationCode_Click(object sender, EventArgs e)
         {
+            code = "";
             email = textBoxEmail.Text;
             timeout = 15;
             buttonVerificationCode.Enabled = false;
@@ -72,7 +73,7 @@ namespace TypingApplication
             labelCode.Visible = true;
             textBoxCode.Visible = true;
             buttonSubmit.Visible = true;
-            MessageBox.Show(code);
+            //MessageBox.Show(code); //for debugging
         }
 
         private void timerGetCode_Tick(object sender, EventArgs e)
@@ -164,7 +165,7 @@ namespace TypingApplication
         private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
         {
             labelPasswordError.Text = "Use 8 or more characters with a mix of letters, numbers and symbols";
-            labelPasswordError.ForeColor = SystemColors.ControlText;
+            labelPasswordError.ForeColor = Color.White;
         }
     }
 }

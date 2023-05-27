@@ -22,7 +22,7 @@ namespace TypingApplication
         Random random = new Random();
 
         private int index = 0;
-        private Color correct = Color.Green;
+        private Color correct = Color.Khaki;
         private Color wrong = Color.Red;
         private Color wrongExtra = Color.FromArgb(192, 0, 0);
 
@@ -87,6 +87,10 @@ namespace TypingApplication
         {
             Application.Run(new Profile());
         }
+        public void openSettings(object obj)
+        {
+            Application.Run(new Settings());
+        }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.email = "";
@@ -118,6 +122,13 @@ namespace TypingApplication
             }
             richTextBoxWords.Text = string.Join(" ", selectedWords);
             startingWords = richTextBoxWords.Text;
+
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+                labelCapsOn.Visible = true;
+                richTextBoxWords.Enabled = false;
+                this.Focus();
+            }
         }
 
         private void button30Words_Click(object sender, EventArgs e)
@@ -141,6 +152,13 @@ namespace TypingApplication
             }
             richTextBoxWords.Text = string.Join(" ", selectedWords);
             startingWords = richTextBoxWords.Text;
+
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+                labelCapsOn.Visible = true;
+                richTextBoxWords.Enabled = false;
+                this.Focus();
+            }
         }
 
         private void button60Words_Click(object sender, EventArgs e)
@@ -164,6 +182,13 @@ namespace TypingApplication
             }
             richTextBoxWords.Text = string.Join(" ", selectedWords);
             startingWords = richTextBoxWords.Text;
+
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+                labelCapsOn.Visible = true;
+                richTextBoxWords.Enabled = false;
+                this.Focus();
+            }
         }
         private void RestartTest()
         {
@@ -283,7 +308,7 @@ namespace TypingApplication
                 Color letterColor = richTextBoxWords.SelectionColor;
                 if (e.KeyCode == Keys.Back && index != 0 && (letterColor == wrong || letterColor == correct))
                 {
-                    richTextBoxWords.SelectionColor = Color.Black;
+                    richTextBoxWords.SelectionColor = Color.White;
                     index--;
                     richTextBoxWords.Select(index, 0);
                 }
@@ -294,10 +319,10 @@ namespace TypingApplication
                     richTextBoxWords.ReadOnly = true;
                     index--;
                 }
-                else if (e.KeyCode == Keys.Back && (letterColor == Color.Black || richTextBoxWords.SelectedText == " "))
+                else if (e.KeyCode == Keys.Back && (letterColor == Color.White || richTextBoxWords.SelectedText == " "))
                 {
                     letterColor = richTextBoxWords.SelectionColor;
-                    while (letterColor == Color.Black)
+                    while (letterColor == Color.White)
                     {
                         index--;
                         missedLetters--;
@@ -321,6 +346,13 @@ namespace TypingApplication
         {
             this.Close();
             thread = new Thread(openProfile);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            thread = new Thread(openSettings);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }

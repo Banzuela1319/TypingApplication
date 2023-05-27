@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             textBoxEmail = new TextBox();
             labelEmail = new Label();
             labelPlease = new Label();
@@ -47,10 +48,13 @@
             // 
             // textBoxEmail
             // 
+            textBoxEmail.BackColor = Color.DimGray;
+            textBoxEmail.BorderStyle = BorderStyle.None;
             textBoxEmail.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxEmail.ForeColor = Color.White;
             textBoxEmail.Location = new Point(100, 81);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(322, 43);
+            textBoxEmail.Size = new Size(322, 36);
             textBoxEmail.TabIndex = 0;
             textBoxEmail.TextChanged += textBoxEmail_TextChanged;
             // 
@@ -58,6 +62,7 @@
             // 
             labelEmail.AutoSize = true;
             labelEmail.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelEmail.ForeColor = Color.White;
             labelEmail.Location = new Point(12, 87);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(82, 37);
@@ -68,6 +73,7 @@
             // 
             labelPlease.AutoSize = true;
             labelPlease.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPlease.ForeColor = Color.White;
             labelPlease.Location = new Point(100, 127);
             labelPlease.Name = "labelPlease";
             labelPlease.Size = new Size(269, 17);
@@ -78,6 +84,7 @@
             // 
             labelCode.AutoSize = true;
             labelCode.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCode.ForeColor = Color.White;
             labelCode.Location = new Point(12, 238);
             labelCode.Name = "labelCode";
             labelCode.Size = new Size(80, 37);
@@ -87,10 +94,13 @@
             // 
             // textBoxCode
             // 
+            textBoxCode.BackColor = Color.DimGray;
+            textBoxCode.BorderStyle = BorderStyle.None;
             textBoxCode.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCode.ForeColor = Color.White;
             textBoxCode.Location = new Point(98, 235);
             textBoxCode.Name = "textBoxCode";
-            textBoxCode.Size = new Size(322, 43);
+            textBoxCode.Size = new Size(322, 36);
             textBoxCode.TabIndex = 4;
             textBoxCode.Visible = false;
             textBoxCode.MouseClick += textBoxCode_MouseClick;
@@ -98,8 +108,11 @@
             // 
             // buttonVerificationCode
             // 
+            buttonVerificationCode.Cursor = Cursors.Hand;
             buttonVerificationCode.Enabled = false;
+            buttonVerificationCode.FlatStyle = FlatStyle.Flat;
             buttonVerificationCode.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonVerificationCode.ForeColor = Color.White;
             buttonVerificationCode.Location = new Point(100, 147);
             buttonVerificationCode.Name = "buttonVerificationCode";
             buttonVerificationCode.Size = new Size(225, 38);
@@ -117,6 +130,7 @@
             // 
             labeltimeout.AutoSize = true;
             labeltimeout.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltimeout.ForeColor = Color.White;
             labeltimeout.Location = new Point(100, 188);
             labeltimeout.Name = "labeltimeout";
             labeltimeout.Size = new Size(37, 17);
@@ -126,8 +140,11 @@
             // 
             // buttonSubmit
             // 
+            buttonSubmit.Cursor = Cursors.Hand;
             buttonSubmit.Enabled = false;
+            buttonSubmit.FlatStyle = FlatStyle.Flat;
             buttonSubmit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSubmit.ForeColor = Color.White;
             buttonSubmit.Location = new Point(98, 301);
             buttonSubmit.Name = "buttonSubmit";
             buttonSubmit.Size = new Size(93, 38);
@@ -151,10 +168,13 @@
             // 
             // textBoxPassword
             // 
+            textBoxPassword.BackColor = Color.DimGray;
+            textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxPassword.ForeColor = Color.White;
             textBoxPassword.Location = new Point(56, 142);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(322, 43);
+            textBoxPassword.Size = new Size(322, 36);
             textBoxPassword.TabIndex = 9;
             textBoxPassword.Visible = false;
             textBoxPassword.MouseClick += textBoxPassword_MouseClick;
@@ -164,6 +184,7 @@
             // 
             labelPassword.AutoSize = true;
             labelPassword.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPassword.ForeColor = Color.White;
             labelPassword.Location = new Point(89, 81);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(257, 37);
@@ -173,21 +194,25 @@
             // 
             // buttonSaveChanges
             // 
+            buttonSaveChanges.BackColor = Color.FromArgb(64, 64, 64);
+            buttonSaveChanges.Cursor = Cursors.Hand;
             buttonSaveChanges.Enabled = false;
+            buttonSaveChanges.FlatStyle = FlatStyle.Flat;
             buttonSaveChanges.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSaveChanges.ForeColor = Color.White;
             buttonSaveChanges.Location = new Point(136, 208);
             buttonSaveChanges.Name = "buttonSaveChanges";
             buttonSaveChanges.Size = new Size(159, 38);
             buttonSaveChanges.TabIndex = 11;
             buttonSaveChanges.Text = "Save Changes";
-            buttonSaveChanges.UseVisualStyleBackColor = true;
+            buttonSaveChanges.UseVisualStyleBackColor = false;
             buttonSaveChanges.Visible = false;
             buttonSaveChanges.Click += buttonSaveChanges_Click;
             // 
             // labelPasswordError
             // 
             labelPasswordError.Font = new Font("Segoe UI Light", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            labelPasswordError.ForeColor = SystemColors.ControlText;
+            labelPasswordError.ForeColor = Color.White;
             labelPasswordError.Location = new Point(24, 188);
             labelPasswordError.Name = "labelPasswordError";
             labelPasswordError.Size = new Size(382, 17);
@@ -200,9 +225,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(434, 361);
-            Controls.Add(labelPasswordError);
             Controls.Add(buttonSaveChanges);
+            Controls.Add(labelPasswordError);
             Controls.Add(labelPassword);
             Controls.Add(textBoxPassword);
             Controls.Add(labelCodeError);
@@ -214,11 +240,15 @@
             Controls.Add(labelPlease);
             Controls.Add(labelEmail);
             Controls.Add(textBoxEmail);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ForgotPassword";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Forgot Password";
+            Text = "Type It";
             ResumeLayout(false);
             PerformLayout();
         }
