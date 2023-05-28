@@ -30,7 +30,6 @@ namespace TypingApplication
         public static double charactersTyped = 0;
         public static double correctTyped = 0;
         public static string typedLetters = "";
-        public static int missedLetters = 0;
         public static double time = 0;
         public static string startingWords;
         Stopwatch stopwatch = new Stopwatch();
@@ -107,7 +106,6 @@ namespace TypingApplication
             charactersTyped = 0;
             correctTyped = 0;
             typedLetters = "";
-            missedLetters = 0;
             richTextBoxWords.Select();
             Properties.Settings.Default.wordsPreference = "10 words";
             Properties.Settings.Default.Save();
@@ -137,7 +135,6 @@ namespace TypingApplication
             charactersTyped = 0;
             correctTyped = 0;
             typedLetters = "";
-            missedLetters = 0;
             richTextBoxWords.Select();
             Properties.Settings.Default.wordsPreference = "30 words";
             Properties.Settings.Default.Save();
@@ -167,7 +164,6 @@ namespace TypingApplication
             charactersTyped = 0;
             correctTyped = 0;
             typedLetters = "";
-            missedLetters = 0;
             richTextBoxWords.Select();
             Properties.Settings.Default.wordsPreference = "60 words";
             Properties.Settings.Default.Save();
@@ -260,7 +256,6 @@ namespace TypingApplication
                                 break;
                             }
                             index++;
-                            missedLetters++;
                         }
                         richTextBoxWords.Select(index, 0);
                     }
@@ -325,7 +320,6 @@ namespace TypingApplication
                     while (letterColor == Color.White)
                     {
                         index--;
-                        missedLetters--;
                         richTextBoxWords.Select(index, -1);
                         letterColor = richTextBoxWords.SelectionColor;
                     }
