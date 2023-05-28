@@ -249,6 +249,7 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Type It";
+            TopMost = true;
             ResumeLayout(false);
             PerformLayout();
         }
