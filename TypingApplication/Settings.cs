@@ -61,6 +61,8 @@ namespace TypingApplication
                 DeleteAccount();
                 MessageBox.Show("Account has been deleted.");
 
+                LogIn.validEmail = "";
+                LogIn.validPassword = "";
                 Properties.Settings.Default.email = "";
                 Properties.Settings.Default.password = "";
                 Properties.Settings.Default.Save();

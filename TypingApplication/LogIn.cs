@@ -82,7 +82,7 @@ namespace TypingApplication
             string email = textBoxEmail.Text;
             string password = textBoxPassword.Text;
             UserCredentials.LoggingIn(email, password);
-            if (validEmail == email)
+            if (validEmail == email && validPassword == password && email != "" && password != "")
             {
                 this.Close();
                 thread = new Thread(openMain);

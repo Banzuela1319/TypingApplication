@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypingApplication", "TypingApplication\TypingApplication.csproj", "{1ADE6F0D-29FB-4FDD-8883-D047C0573998}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Type It - Set up", "Type It - Set up\Type It - Set up.vdproj", "{B6EE0860-0D8B-416A-9ED7-1D3F022A3318}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Type It - Set Up", "Type It - Set Up\Type It - Set Up.vdproj", "{6577901C-F756-4EF8-87CE-556DA11E286E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{1ADE6F0D-29FB-4FDD-8883-D047C0573998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADE6F0D-29FB-4FDD-8883-D047C0573998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADE6F0D-29FB-4FDD-8883-D047C0573998}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6EE0860-0D8B-416A-9ED7-1D3F022A3318}.Debug|Any CPU.ActiveCfg = Debug
-		{B6EE0860-0D8B-416A-9ED7-1D3F022A3318}.Release|Any CPU.ActiveCfg = Release
+		{6577901C-F756-4EF8-87CE-556DA11E286E}.Debug|Any CPU.ActiveCfg = Debug
+		{6577901C-F756-4EF8-87CE-556DA11E286E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
