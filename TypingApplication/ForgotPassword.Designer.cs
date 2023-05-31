@@ -149,7 +149,7 @@
             buttonSubmit.Name = "buttonSubmit";
             buttonSubmit.Size = new Size(93, 38);
             buttonSubmit.TabIndex = 7;
-            buttonSubmit.Text = "Sumbit";
+            buttonSubmit.Text = "Submit";
             buttonSubmit.UseVisualStyleBackColor = true;
             buttonSubmit.Visible = false;
             buttonSubmit.Click += buttonSubmit_Click;
